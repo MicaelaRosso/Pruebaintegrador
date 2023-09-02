@@ -496,6 +496,11 @@ main{
     animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+.product img {
+    height: 50px;
+    width: 50px;
+}
+
 /*.comprar_tecito {
    font-size: 20px;
    font-weight: 900;

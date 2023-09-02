@@ -1,9 +1,9 @@
 //Importo los dos contenedores principales
 //El que contiene a las card, importo por clase y que contiene a los productos del carrito 
 
-const productsContainer = document.querySelector('.products-container')
-const productsCart = document.querySelector('.cart-container')
-const total = document.querySelector('.total')
+const productsContainer = document.querySelector('.products-container');
+const productsCart = document.querySelector('.cart-container');
+const total = document.querySelector('.total');
 const categoriesContainer = document.querySelector('.categories');
 const categoriesList = document.querySelectorAll('.category'); //Agarra a todos los botones de la lista
 //const showMoreBtn = document.querySelector('.btn-load'); Es del botón ver mas
@@ -298,7 +298,7 @@ const addProduct = (e) => {
   const handlePlusBtnEvent = (id) =>{
     const existingCartProduct = cart.find((item) => item.id === id)
     addUnitToProduct(existingCartProduct)
-  }
+  };
 
   // Función para restar de cada producto del carrito
 const handleMinusBtnEvent = (id) =>{
@@ -311,13 +311,13 @@ const handleMinusBtnEvent = (id) =>{
       return; //por si no elimina el productip
     }
     subtractProductUnit(existingCartProduct) //sustrae una unidad 
-  }
+  };
   
   // Función para remover un producto del carrito
   const removeProductFromCart = (product) =>{
     cart = cart.filter((item) => item.id !== product.id)
     updateCartState()
-  }
+  };
   
     const subtractProductUnit = (product) =>{
   cart = cart.map((item) => {
@@ -325,7 +325,7 @@ const handleMinusBtnEvent = (id) =>{
     { ...item, quantity: Number(item.quantity) - 1 }
     : item
   });
-  }
+  };
   
   // Función para manejar los eventos al apretar el botón mas o menos del item del carrito
   
@@ -337,13 +337,13 @@ const handleMinusBtnEvent = (id) =>{
     }
   
     updateCartState()
-  }
+  };
   
   // Función para vaciar el carrito
   const resetCartItems = () =>{
     cart = []
     updateCartState()
-  }
+  };
   
   // Función para completar la compra o vaciar le carrito
   
@@ -353,17 +353,17 @@ const handleMinusBtnEvent = (id) =>{
       resetCartItems()
       alert(successMsg)
     }
-  }
+  };
   
   // Función para disparar un mensaje de compra existosa
   const completeBuy = () =>{
     completeCartAction("¿Completar compra?", "¡Gracias por su compra!")
-  }
+  };
   
   // Función para disparar el mensaje de vaciado exitoso del carrito
   const deleteCart = () =>{
     completeCartAction("¿Vaciar el carrito?", "¡Su carrito está vacío!")
-  }
+  };
   
   const init = () =>{
     renderProducts(appState.products[0])
@@ -383,7 +383,7 @@ const handleMinusBtnEvent = (id) =>{
     disableBtn(buyBtn)
     disableBtn(deleteBtn)
     renderCartBubble(cart)
-  }
+  };
   
   
   init()

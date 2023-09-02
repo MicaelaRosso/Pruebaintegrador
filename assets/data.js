@@ -78,23 +78,23 @@ const productsRoyalBlends = [
 
   //PARA BOTON VER MÀS
   //Funcion dividir los productos
-  //const divideProductsInParts = (size) => {
+  const divideProductsInParts = (size) => {
     // retornar la lista de productos
-    //let productsList = []
+    let productsList = []
     // 0 - 6 - 12
-    //for (let i = 0; i < productsRoyalBlends.length; i+= size) {
+    for (let i = 0; i < productsRoyalBlends.length; i+= size) {
       // Voy a cortar cada elemento y agregar cada corte el product list
-      //productsList.push(productsRoyalBlends.slice(i,i + size))
+      productsList.push(productsRoyalBlends.slice(i,i + size))
       }
-    //return productsList;
+    return productsList;
   }
   
 //______________________//
 
 //Estado de aplicación:
 const appState = {                             //  0                     1              2
- //  products: divideProductsInParts(6), // [ [{},{},{},{},{}] , [{},{},{},{},{}], [{},{},{},{},{}]] 3
+  products: divideProductsInParts(9), // [ [{},{},{},{},{}] , [{},{},{},{},{}], [{},{},{},{},{}]] 3
   currentProductsIndex: 0,
-  // productsLimit: divideProductsInParts(6).length, // 3
+  productsLimit: divideProductsInParts(9).length, // 3
   activeFilter: null
 };
