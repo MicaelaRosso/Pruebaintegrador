@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador JavaScript RoyalBlends</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<!-- SECTION HEADER CON NAVBAR-->
+   <header> <!-- Contenedor principal con la imagen -->
+    <a href="./index.html"><img src="./assets/img/Royaltecito.png" alt="Royaltecito CK" class="logo_royaltecito"></a> <!--Le agrego clase al logo para poder trabajar despues-->
+    <nav class="navbar"> <!--Etiqueta nav / Segundo contenedor -->
+        <!-- Menù Hamburguesa-->
+        <label for="menu-toggle" class="menu-label">
+            <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+          </label>
+          <input type="checkbox" id="menu-toggle" />
+          <!---->
+        <ul class="navbar_list"><!--Lista de accesos en nav-->
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li> 
+            <li><a href="#products">Productos</a></li><!--Envolvemos el texto en la etiqueta A-->
+            <li><a href="#contact_us">Contacto</a></li>
+            <li><a href="./register.html">Registro</a></li>
+            <li><a href="./login.html">Iniciar sesión</a></li>
+        </ul>
+
+        <div class="cart-label"> <!--Carrito-->
+            <img class="carrito" src="./assets/img/carrito.png" alt="">
+           
+              <div class="cart-bubble">0</div> <!--Burbuja del carrito-->
+             </div>
+
+    <!--__________________________________-->
+    <div class="cart">
+
+        <h2>Tu carrito</h2>
+
+
+        <div class="cart-container"> <!--Estan las tarjetas a renderizar dentro del carrito-->
+
+        </div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">18.3 ETH</span>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <button class="btn-delete">Vaciar carrito</button>
+      </div>
+
+      <div class="overlay"></div>
+    </nav>
+  </header>
+       
+
+   <main> <!--envuelve contenido principal-->
+
+    <!--HERO-->
+    <section id="hero" class="img-back full-height"><!--Identificamos a la seccion con ID no con class-->
+        <div class="hero-info"> <!-- Primer contenedor-->
+            <h1> - Royal Blends - </h1>
+                <p> Somos un grupo de amigos apasionados por viajar y emprender, por eso, en esta oportunidad te traémos 
+                    blends artesanales, inspirados en olores, recuerdos y sabores de los distintos continentes en los que estuvimos !</p>
+                    <h2> 🌏+🍃+❤️=☕️ </h2>
+                    
+                    <a href= "https://www.mercadolibre.com.ar/"> Quiero mi tecito </a> <!--Agrego enunciado de boton-->
+                </div>
+            
+                <div class="hero-card">
+                    <img src="./assets/img/navigation.png" alt="Mundologo">
+            
+                    <div class="hero-card-info"> <!-- Es el contenedor con la info directa de abajo de la tarjeta-->
+                        <h3>Paises visitados</h3>
+                        <span>18</span>
+                        <h3>Blends vendidos</h3>
+                        <span>465</span>
+
+                    </div>
+                </div>
+        </section> 
+   
+
+        <!--SECTION NOSOTROS -->
+    <section id="nosotros" class="full-height">
+       <p>
+            Diseñamos blends para que prepares las infusiones más ricas en tu casa, fiel a nuestra pasión, inspirandos en los diferentes paìses que recorrimos. 
+            Mezclamos diversos sabores y aromas para que cada té, Gin Tonic o mate, te lleve a un lugar distinto e inolvidable.
+            Blends de calidad premium ! 
+        </p>
+        <div class="imgsectionnosotros ">
+        <img src="./assets/img/imagennosotros.jpg" alt="Imagen section nosotros">
+    </div>
+    </section>
+        
+ <!--SECTION BLENDS -->
+
+    <section id="products">  <!--</section>class="full-height">
+        
+        <div class="products-info">
+            <h2> Descubrí todos nuestros Blends ! </h2>
+            <p> Pero antes, ¿ya decidiste a qué país vas a viajar hoy? ✈️ </p>
+            <span>Apurate que tu próximo destino está a un click de distancia. </span> 
+            </div>-->
+
+             <!-- CATEGORIAS -->
+      <div class="categories">
+        <button class="category active">🔎 Ver todos</button>
+        <button class="category" data-category="te">☕ Blend Té</button>
+        <button class="category" data-category="mate">🧉 Blend Mate</button>
+        <button class="category" data-category="gintonic">🍹Blend GinTonic</button>
+      </div>
+            <!--PRODUCTOS -->
+            
+        <div class="products-container"> 
+        
+        </div>
+           
+            <!--<div class="info-card">
+                <img src="./assets/img/tecarrot.jpg" alt="Icono Carrot cake">
+                <h3>Carrot Cake Disney</h3>
+                <h2>🥕🥕</h2>
+                    <p>Hebras de té rojo, baby carrots y canela en rama, con el dulce sabor clásico del pastry americano.</p>
+            <div class="comprar_tecito">
+                <p>$350 x 12u.</p>
+               <a href="https://www.mercadolibre.com.ar/"><button> Comprar mi tecito </button></a>
+            </div>
+                </div>
+
+            <div class="info-card">
+                <img src="./assets/img/tejardines.jpg" alt="Icono Jardines de Cuzco">
+                <h3>Jardines de Cuzco</h3>
+                <h2>🌄🌄</h2>
+                    <p>Té verde color Machu Pichu, flores de manzanilla y flores de caléndula, muy floral, herval y liviano. </p>
+                    <div class="comprar_tecito">
+                        <p>$400 x 12u.</p>
+                        <a href="https://www.mercadolibre.com.ar/"><button> Comprar mi tecito </button></a>
+                    </div>
+            </div>
+            
+            <div class="info-card">
+                <img src="./assets/img/teleña.jpg" alt="Icono Leña Alemana">
+                <h3>Leña de árbol Alemán</h3>
+                <h2>🍂🍂</h2>
+                <p>Aromas amaderados entre árboles nevados. Té negro, malta caramelo, humo natural.</p>
+                <div class="comprar_tecito">
+                    <p>$250 x 12u.</p>
+                    <a href="https://www.mercadolibre.com.ar/"><button> Comprar mi tecito </button></a>
+                </div>
+            </div>-->
+       
+    </section> 
+
+
+
+    <!-- Creo que la section para el CONTACT US-->
+    <section id="contact_us" class="full-height">
+        <h2> -> Envianos tu consulta <- </h2> 
+        <div class="formulario">
+           
+            <form action="">
+                <div class="form_item">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" placeholder="Escriba su nombre">
+                </div>
+                <div class="form_item">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Escriba su correo electrònico">
+                </div>
+                <div class="form_item">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="texto" id="texto" cols="70" rows="2">Escriba su consulta, gracias !</textarea>
+                    <!--<input type="text" name="consulta" id="consulta" placeholder="Escriba su consulta">
+                    -->
+                </div>
+                <div class="boton">
+                <button type="submit">Enviar
+                </button>
+            </div>
+            </form>
+        </div>
+        
+        
+        <div class="datos_contacto"> <!--Creo contenedor de datos de contacto-->
+           <h2> Take Away Royal Tecito</h2>
+            <div class="contacto_container">
+            <!--class="datos_list"-->
+                <ul>
+                <li> <img src="./assets/img/location.png" alt="Logolocación"> 
+                    Hyde Park 3540, Ballester </li>
+                <li> <img src="./assets/img/email.png" alt="Logoemail"> 
+                    royaltecito@gmail.com</li>
+                <li> <img src="./assets/img/call.png" alt="">
+                    011 1133 4455</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="mapa_contacto">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.672635327847!2d-58.55212892513277!3d-34.561843155286326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb75ebd6e4277%3A0x86cd75ca559e237f!2sPlaza%20Alem!5e0!3m2!1ses-419!2sar!4v1683674951571!5m2!1ses-419!2sar" width="400" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+        
+    </main>
+
+    <footer>
+       <!-- <div> -->
+          <ul class="footer-links">
+            <li><a href="#">Términos de Uso</a></li>
+            <li><a href="#">Trabajá con Nosotros</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        <!--</div>-->
+        <p> ©2023 Royal Blends. All rights reserved. Designed by @micky.rosso</p>
+    </footer>
+    <script src="./assets/data.js"></script>
+    <script src="./assets/index.js"></script>
+    
+   
+</body>
+</html>
