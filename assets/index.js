@@ -414,7 +414,7 @@ const init = () =>{
   cartBtn.addEventListener("click", toggleCart)
   menuBtn.addEventListener("click", toggleMenu)
   window.addEventListener("scroll", closeOnScroll)
-  barsMenu.addEventListener("click", closeOnClick)
+  //barsMenu.addEventListener("click", closeOnClick)
   overlay.addEventListener("click", closeOnOverlayClick)
   document.addEventListener("DOMContentLoaded", renderCart)
   document.addEventListener("DOMContentLoaded", showCartTotal)
