@@ -47,7 +47,7 @@ const productsData = [
   {
     id: 6,
     name: "Topping Zamba de la Qubrada",
-    bid: 7.33,
+    bid: 450.00,
     user: "HardBena",
     category: "ToppingMate",
     userImg: "./assets/img/user.png",

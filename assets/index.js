@@ -26,7 +26,6 @@ const createProductTemplate = (product) => {
 
         <div class="product-top">
             <h3>${name}</h3>
-            <p>Current Bid</p>
         </div>
 
         <div class="product-mid">
@@ -39,12 +38,7 @@ const createProductTemplate = (product) => {
 
 
         <div class="product-bot">
-            <div class="product-offer">
-                <div class="offer-time">
-                    <img src="./assets/img/fire.png" alt="" />
-                    <p>05:12:07</p>
-                </div>
-                <button class="btn-add"
+               <button class="btn-add"
                 data-id='${id}'
                 data-name='${name}'
                 data-bid='${bid}'
