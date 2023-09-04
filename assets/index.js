@@ -34,7 +34,7 @@ const createProductTemplate = (product) => {
                 <img src=${userImg} alt="user" />
                 <p>@${user}</p>
             </div>
-            <span>${bid} eTH</span>
+            <span>${bid} $</span>
         </div>
 
 
@@ -48,7 +48,7 @@ const createProductTemplate = (product) => {
                 data-id='${id}'
                 data-name='${name}'
                 data-bid='${bid}'
-                data-img='${cardImg}'>Add</button>
+                data-img='${cardImg}'>Comprar</button>
             </div>
         </div>
     </div>
@@ -208,7 +208,7 @@ const createCartProductTemplate = (cartProduct) => {
       <div class="item-info">
         <h3 class="item-title">${name}</h3>
         <p class="item-bid">Current bid</p>
-        <span class="item-price">${bid} ETH</span>
+        <span class="item-price">${bid} $</span>
       </div>
       <div class="item-handler">
         <span class="quantity-handler down" data-id=${id}>-</span>
@@ -240,7 +240,7 @@ const getCartTotal = () => {
 // función para mostrar el total de la compra
 
 const showCartTotal = () => {
-  total.innerHTML = `${getCartTotal().toFixed(2)} eTH`;
+  total.innerHTML = `${getCartTotal().toFixed(2)} $`;
 };
 
 // función para actualizar la burbuja de cantidad con el numero de productos en el carrito

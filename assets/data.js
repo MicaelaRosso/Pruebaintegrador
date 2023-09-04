@@ -2,7 +2,7 @@ const productsData = [
   {
     id: 1,
     name: "Blend Té Carrot Cake",
-    bid: 6.89,
+    bid: 450.00,
     user: "thetroncous",
     category: "BlendTe",
     userImg: "./assets/img/user.png",
@@ -11,7 +11,7 @@ const productsData = [
   {
     id: 2,
     name: "Blend Té Jardines de Cuzco",
-    bid: 5.89,
+    bid: 300.00,
     user: "kirik8",
     category: "BlendTe",
     userImg: "./assets/img/user.png",
@@ -20,7 +20,7 @@ const productsData = [
   {
     id: 3,
     name: "Blend Té Leña Alemana",
-    bid: 4.89,
+    bid: 350.00,
     user: "FD10S",
     category: "BlendTe",
     userImg: "./assets/img/user.png",
@@ -29,7 +29,7 @@ const productsData = [
   {
     id: 4,
     name: "Topping Folclore del Norte",
-    bid: 3.67,
+    bid: 500.00,
     user: "Urastream",
     category: "ToppingMate",
     userImg: "./assets/img/user.png",
@@ -38,7 +38,7 @@ const productsData = [
   {
     id: 5,
     name: "Topping Olor a café de Bogotá",
-    bid: 4.52,
+    bid: 430,
     user: "Gulineta",
     category: "ToppingMate",
     userImg: "./assets/img/user.png",
@@ -56,7 +56,7 @@ const productsData = [
   {
     id: 7,
     name: "Gin Tonic Buey de Australia",
-    bid: 2.2,
+    bid: 380.00,
     user: "ThingyCake",
     category: "BlendGinTonic",
     userImg: "./assets/img/user.png",
@@ -65,7 +65,7 @@ const productsData = [
   {
     id: 8,
     name: "Gin Tonic Lince del Amazonas",
-    bid: 1.12,
+    bid: 525.00,
     user: "NickyG",
     category: "BlendGinTonic",
     userImg: "./assets/img/user.png",
@@ -74,7 +74,7 @@ const productsData = [
   {
     id: 9,
     name: "Gin Tonic Tucán de Iryapú",
-    bid: 0.5,
+    bid: 525.00,
     user: "ThingyBit",
     category: "BlendGinTonic",
     userImg: "./assets/img/user.png",
@@ -83,7 +83,7 @@ const productsData = [
   {
     id: 10,
     name: "Combo Blends x4",
-    bid: 8.35,
+    bid: 1890.00,
     user: "LilKenny",
     category: "BlendGinTonic",
     userImg: "./assets/img/user.png",
