@@ -22,17 +22,48 @@
   </header>  
 
   <main class="main">
-    <form class="form">
+
+    <!-- ____________ ANDA CON YOUTUBE -->
+    
+     <!--<form class="form" id="form">
       <h1 class="form__title">Ingresá a tu cuenta</h1>
       <!-- Email -->
-      <input type="email" placeholder="Email" class="form__input" />
+      <!-- <input type="email" name="" id="email" placeholder="Ingrese su email" class="form__input"/>
       <!-- Password -->
-      <input type="password" placeholder="Password" class="form__input" />
+       <!--<input type="password" name="" id="password"  placeholder="Password" class="form__input" />
+      <button type="submit">Ingresar</button>
+      <p class="warnings" id="warnings"></p>
+    </form> -->
+
+<!-- ______________________________ CHAT GPT________________ -->
+    <form id="login-form" class="form">
+      <h1 class="form__title">Ingresá a tu cuenta</h1>
+      <!-- Email -->
+      <input type="email" id="email" placeholder="Email" class="form__input" />
+      <div id="emailError" class="error"></div>
+      <!-- Password -->
+     <input type="password" id="password" placeholder="Password" class="form__input" />
+      <div id="passwordError" class="error"></div>
+      <button type="button" class="btn btn--submit" onclick="validateForm()">Ingresar</button>
+  </form>
+
+  <div id="successMessage" style="display: none;" class="success">¡Ingreso exitoso!</div>
+
+  
+
+    __________________________________________________________________-
+   <!--ORIGINAL MIO
+     <form class="form">
+      <h1 class="form__title">Ingresá a tu cuenta</h1>
+      <!-- Email -->
+      <!--<input type="email" placeholder="Email" class="form__input" />
+      <!-- Password -->
+      <!--<input type="password" placeholder="Password" class="form__input" />
       <a href="./index.html" class="btn btn--submit">Ingresar</a>
     </form>
+  -->
   </main>
-
-
+<script src="./assets/login.js"></script>
 </body>
 
 </html>

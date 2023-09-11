@@ -13,12 +13,21 @@ const barsMenu = document.querySelector('.navbar-list');
 const overlay = document.querySelector('.overlay');
 const successModal = document.querySelector('.add-modal'); // react-hot-toast
 const deleteBtn = document.querySelector('.btn-delete');
+//FORM CONTACT US (para validar)
+const form = document.getElementById ('form');
+const inputName = document.getElementById ('name');
+const inputMail = document.getElementById ('email');
+const inputSubject = document.getElementById ('texto');
+const submit = document.getElementById('submit-btn')
+const formMessage = document.getElementById ('form-message')
+//______________________________
+
 
 // seteamos el carrito
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const createProductTemplate = (product) => {
-  const { id, name, bid, user, userImg, cardImg } = product;
+  const { id, name, bid, description, cardImg } = product;
   return `
     <div class="product">
     <img src=${cardImg} alt=${name} />
@@ -30,8 +39,7 @@ const createProductTemplate = (product) => {
 
         <div class="product-mid">
             <div class="product-user">
-                <img src=${userImg} alt="user" />
-                <p>@${user}</p>
+               <p>${description}</p>
             </div>
             <span>${bid} $</span>
         </div>
@@ -201,7 +209,7 @@ const createCartProductTemplate = (cartProduct) => {
       <img src=${img} alt="Nft del carrito" />
       <div class="item-info">
         <h3 class="item-title">${name}</h3>
-        <p class="item-bid">Current bid</p>
+        <p class="item-bid">Precio:</p>
         <span class="item-price">${bid} $</span>
       </div>
       <div class="item-handler">
@@ -216,7 +224,7 @@ const createCartProductTemplate = (cartProduct) => {
 
 const renderCart = () => {
   if (!cart.length) {
-    productsCart.innerHTML = `<p class="empty-msg">No hay productos en el carrito.</p>`;
+    productsCart.innerHTML = `<p class="empty-msg">❌ No tenes productos en el carrito ❌</p>`;
     return;
   }
   productsCart.innerHTML = cart.map(createCartProductTemplate).join('');
@@ -393,14 +401,82 @@ const completeCartAction = (confirmMsg, successMsg) =>{
 
 // Función para disparar un mensaje de compra existosa
 const completeBuy = () =>{
-  completeCartAction("¿Desea completar su compra?", "¡Gracias por su compra!")
+  completeCartAction("¿Desea completar su compra?", "¡Gracias!")
 }
 
 // Función para disparar el mensaje de vaciado exitoso del carrito
 const deleteCart = () =>{
-  completeCartAction("¿Desea vaciar el carrito?", "¡No hay productos en el carrito!")
+  completeCartAction("¿Vaciar el carrito?", "¡Tu carrito está vacío!")
 }
 
+//FORM CONTACT US (para validar)
+
+// Funcion para validar los datos del formulario de contacto
+const isEmpty = (input) => {
+  return !input.value.trim().length;
+};
+
+const isValidName = (input) => {
+  let valid = false;
+  if (isEmpty(input)) {
+        formMessage.classList.remove("hidden")
+        formMessage.innerHTML='Ingrese su nombre'
+        return;
+    } 
+    valid = true;
+    return valid;
+  }  
+  
+  //chat gpt para validar email ok y que no este vacio
+  const isValidEmail = (input) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const inputValue = input.value.trim(); // Elimina espacios en blanco al principio y al final
+
+    if (inputValue === "") {
+        formMessage.classList.remove("hidden");
+        formMessage.innerHTML = 'El campo de correo electrónico no debe estar vacío.';
+        return false;
+    }
+
+    if (!emailRegex.test(inputValue)) {
+        formMessage.classList.remove("hidden");
+        formMessage.innerHTML = 'Por favor, ingrese una dirección de correo válida.';
+        return false;
+    }
+
+    return true;
+};
+
+ const isValidText = (input) => {
+  let valid = false;
+  if (isEmpty(input)) {
+        formMessage.classList.remove("hidden")
+        formMessage.innerHTML='Deje un mensaje'
+        return;
+    }
+
+    valid = true;
+    return valid;
+  } 
+
+ const validateForm = (e) =>{
+  e.preventDefault();
+  let validName = isValidName (inputName);
+  let validEmail = isValidEmail (inputMail);
+  let validText = isValidText(inputSubject);
+
+  let isValidForm =
+  validName &&
+  validEmail &&
+  validText;
+
+  if(isValidForm){
+    formMessage.classList.remove("hidden")
+    formMessage.innerHTML='Gracias por su mensaje, le responderemos a la brevedad'
+    form.reset();
+  } 
+ }
+//___________________________________
 const init = () =>{
   renderProducts(appState.products[0])
   showMoreBtn.addEventListener("click", showMoreProducts)
@@ -419,6 +495,11 @@ const init = () =>{
   disableBtn(buyBtn)
   disableBtn(deleteBtn)
   renderCartBubble(cart)
+  //form init
+  form.addEventListener("submit", validateForm);
+  inputName.addEventListener("input",()=> isValidName(inputName));
+  inputMail.addEventListener("input",()=> isValidEmail(inputMail));
+  inputSubject.addEventListener("input",()=> isValidText(inputSubject));
 }
 
 
