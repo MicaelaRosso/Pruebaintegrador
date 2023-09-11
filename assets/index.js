@@ -9,7 +9,7 @@ const cartBubble = document.querySelector('.cart-bubble');
 const cartBtn = document.querySelector('.cart-label');
 const menuBtn = document.querySelector('.menu-label');
 const cartMenu = document.querySelector('.cart');
-const barsMenu = document.querySelector('.navbar-list');
+const barsMenu = document.querySelector('.navbar_list');
 const overlay = document.querySelector('.overlay');
 const successModal = document.querySelector('.add-modal'); // react-hot-toast
 const deleteBtn = document.querySelector('.btn-delete');
@@ -484,7 +484,7 @@ const init = () =>{
   cartBtn.addEventListener("click", toggleCart)
   menuBtn.addEventListener("click", toggleMenu)
   window.addEventListener("scroll", closeOnScroll)
-  //barsMenu.addEventListener("click", closeOnClick)
+  barsMenu.addEventListener("click", closeOnClick)
   overlay.addEventListener("click", closeOnOverlayClick)
   document.addEventListener("DOMContentLoaded", renderCart)
   document.addEventListener("DOMContentLoaded", showCartTotal)

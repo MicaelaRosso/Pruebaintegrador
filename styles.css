@@ -241,6 +241,25 @@ header{
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     border: 5px inset rgb(58 160 50 / 92%);
   }
+
+  .overlay {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+}
+
+.show-overlay {
+  display: flex; /*block*/
+}
+
   
   .empty-msg {
     color: var(--nav);
@@ -459,22 +478,6 @@ main{
     
 }
 
-.show-overlay {
-    display: block;
-}
-.overlay {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    display: none;
-}
 
 /*Contenedor cada producto*/
 /*Estilo contenedor*/
@@ -852,6 +855,8 @@ footer p {
   transition: all 0.5s ease-in;
 }
 
+/*_________________________________________/*
+
 /*MEDIAQUERIES CSS PRINCIPAL */
 
 @media screen and (max-width: 992px) {
@@ -886,9 +891,19 @@ footer p {
         width: 50px;
     }
 
+    .open-menu {
+      display: flex;
+      transform: translate(0%);
+      transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    }
+
     /*Le voy a decir que cuando el menu toggle este chequeado, desplaze la clase navbar list*/
     #menu-toggle:checked+.navbar_list {
         display: flex;
+}
+
+.overlay {
+  z-index: -1;
 }
 
 /* ARREGLO SECTION HERO QUE SE ROMPE ENTRE 992 Y 768 */
@@ -941,14 +956,21 @@ width: 80%;
     padding: 0 20px;
 }
 
+#contact_us {
+  gap: 15px;
+ 
+}
+
+.product-mid span {
+  margin-top: 12px;
+}
+
 .datos_contacto {
     padding: 0 0 20px 0;
 }
 
 }
-
-
-                     /*MEDIA 768 */
+   /*MEDIA 768 */
 
 
 @media screen and (max-width: 768px){
@@ -976,6 +998,10 @@ width: 80%;
         font-size: 25px;
         margin: 25px 10px;
     }
+
+    .categories {
+      flex-wrap: wrap;
+  }
 
     #contact_us h2 {
         font-size: 35px;
@@ -1015,8 +1041,7 @@ width: 80%;
     }
 
     .mapa_contacto {
-        width: 75%;
-        display: flex;
+          display: flex;
     }
 
     footer {
