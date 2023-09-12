@@ -45,7 +45,7 @@ const productsData = [
     bid: 450.00,
     description: "Poleo, melisa y yerbabuena. Fresco, frutal y herbal. Calma los nervios y concilia el sueño.",
     category: "ToppingMate",
-    cardImg: "./assets/img/BlendZamba.png",
+    cardImg: "./assets/img/BlendZamba.jpg",
   },
   {
     id: 7,
