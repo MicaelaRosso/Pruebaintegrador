@@ -29,7 +29,7 @@ const productsData = [
     bid: 500.00,
     description: "Té Verde, Cedrón y Manzanilla. Contribuye al alivio del estrés y la ansiedad.",
     category: "ToppingMate",
-    cardImg: "./assets/img/BlendFolclore.png",
+    cardImg: "./assets/img/BlendFolclore.jpg",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const productsData = [
     bid: 430,
     description: "Combinación de azúcar Mascabo y café torrado. Energía para todos tus días.",
     category: "ToppingMate",
-    cardImg: "./assets/img/BlendCafe.png",
+    cardImg: "./assets/img/BlendCafe.jpg",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const productsData = [
     bid: 380.00,
     description: "Hibiscus y menta de Egipto con romero. Refrescante y aromático con tonos magentas.",
     category: "BlendGinTonic",
-    cardImg: "./assets/img/BlendBuey.png",
+    cardImg: "./assets/img/BlendBuey.jpg",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const productsData = [
     bid: 525.00,
     description: "Sabor dulce con aroma a frutos. Tonos anaranjados. Rooibos sudaricano, higo turco y cedrón.",
     category: "BlendGinTonic",
-    cardImg: "./assets/img/BlendLince.png",
+    cardImg: "./assets/img/BlendLince.jpg",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const productsData = [
     bid: 525.00,
     description: "Floral y dulce. Tonos rosados. Pétalos de rosa india, roble francés y manzana patagónica.",
     category: "BlendGinTonic",
-    cardImg: "./assets/img/BlendTucan.png",
+    cardImg: "./assets/img/BlendTucan.jpg",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const productsData = [
     bid: 1890.00,
     description: "Incluye Tucán de Iryapú, Lince del Amazonas, Buey de Australia y edición especial Panda de Corea ",
     category: "BlendGinTonic",
-    cardImg: "./assets/img/BlendTodos.png",
+    cardImg: "./assets/img/BlendTodos.jpg",
   },
  
 ];

@@ -2,7 +2,7 @@ const productsContainer = document.querySelector('.products-container');
 const productsCart = document.querySelector('.cart-container');
 const total = document.querySelector('.total');
 const categoriesContainer = document.querySelector('.categories');
-const categoriesList = document.querySelectorAll('.category'); //NodeList || NO ES UN ARRAY []
+const categoriesList = document.querySelectorAll('.category'); 
 const showMoreBtn = document.querySelector('.btn-load');
 const buyBtn = document.querySelector('.btn-buy');
 const cartBubble = document.querySelector('.cart-bubble');
@@ -11,7 +11,7 @@ const menuBtn = document.querySelector('.menu-label');
 const cartMenu = document.querySelector('.cart');
 const barsMenu = document.querySelector('.navbar_list');
 const overlay = document.querySelector('.overlay');
-const successModal = document.querySelector('.add-modal'); // react-hot-toast
+const successModal = document.querySelector('.add-modal'); 
 const deleteBtn = document.querySelector('.btn-delete');
 //FORM CONTACT US (para validar)
 const form = document.getElementById ('form');
