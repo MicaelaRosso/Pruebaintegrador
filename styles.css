@@ -842,7 +842,7 @@ footer p {
   align-items: center;
   justify-content: center;
   color: var(--text-white);
-  background-color: green;
+  background-color: var(--btn-bg);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -898,9 +898,9 @@ footer p {
     }
 
     /*Le voy a decir que cuando el menu toggle este chequeado, desplaze la clase navbar list*/
-    #menu-toggle:checked+.navbar_list {
+    /*#menu-toggle:checked+.navbar_list {
         display: flex;
-}
+}*/
 
 .overlay {
   z-index: -1;
