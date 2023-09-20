@@ -90,7 +90,6 @@ const productsData = [
   const divideProductsInParts = (size) => {
     // retornar la lista de productos
     let productsList = []
-    // 0 - 6 - 12
     for (let i = 0; i < productsData.length; i+= size) {
       // Voy a cortar cada elemento y agregar cada corte el product list
       productsList.push(productsData.slice(i,i + size))
@@ -101,8 +100,8 @@ const productsData = [
 //______________________//
 
 //Estado de aplicación:
-const appState = {                             //  0                     1              2
-  products: divideProductsInParts(3), // [ [{},{},{},{},{}] , [{},{},{},{},{}], [{},{},{},{},{}]] 3
+const appState = {                             
+  products: divideProductsInParts(3),
   currentProductsIndex: 0,
   productsLimit: divideProductsInParts(3).length, // 3
   activeFilter: null

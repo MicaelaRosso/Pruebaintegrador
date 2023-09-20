@@ -57,20 +57,18 @@ const createProductTemplate = (product) => {
 </div>`;
 };
 
-// [{},{},{}] || ['<></>','<></>','<></>'] || '<></>''<></>''<></>''<></>''<></>'
 const renderProducts = (productList) => {
   productsContainer.innerHTML += productList
     .map(createProductTemplate)
     .join('');
 };
-// Ver más //
-/////////////////////////////////////////////
+// Para el botón "Ver más" //
 
 const isLastIndexOf = () => {
   return appState.currentProductsIndex === appState.productsLimit - 1;
 };
 
-// Función par arenderizar mpas productos cuando la persona pariete ver más
+// Función para renderizar mas productos cuando la persona apriete ver más
 
 const showMoreProducts = () => {
   appState.currentProductsIndex += 1;
@@ -81,7 +79,7 @@ const showMoreProducts = () => {
   }
 };
 
-// función para mostrar u ocultar el boton de ver más
+// función Mostrar u ocultar el boton de ver más
 
 const setShowMoreVisibility = () => {
   if (!appState.activeFilter) {
@@ -94,7 +92,6 @@ const setShowMoreVisibility = () => {
 // Lógica de los filtros
 
 // Fucnión para cambiar el estado de los botones del filtro/categorias
-//Si el dataset tiene un valor dif de la categoria sellecionada remuevo la categoria "active"
 const changeBtnActiveState = (selectedCategory) => {
   const categories = [...categoriesList];
   categories.forEach((categoryBtn) => {
@@ -123,7 +120,6 @@ const isInactiveFilterBtn = (element) => {
 };
 
 // funcion para aplicar el filtro cuando se apreta un boton de categoria
-//
 const applyFilter = (event) => {
   const { target } = event;
   console.log(target);
@@ -335,8 +331,6 @@ const handlePlusBtnEvent = (id) =>{
 }
 
 // Función para restar de cada producto del carrito
-// Ciclo de vida <- termino/fallece la función
-// EN EL FOR - break / continue
 const handleMinusBtnEvent = (id) =>{
   const existingCartProduct = cart.find((item) => item.id === id)
 
@@ -355,14 +349,6 @@ const removeProductFromCart = (product) =>{
   updateCartState()
 }
 
-// Función para restar una unidad a un producto del carrito
-/*
- [{
-  messi,
-  4
- }]
-
-*/
 const subtractProductUnit = (product) =>{
 cart = cart.map((item) => {
   return item.id === product.id ?
